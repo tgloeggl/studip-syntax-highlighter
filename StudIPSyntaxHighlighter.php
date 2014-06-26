@@ -11,8 +11,9 @@ class StudIPSyntaxHighlighter extends StudIPPlugin implements SystemPlugin
     {
         parent::__construct();
         
-        PageLayout::addScript($this->getPluginURL() . '/scripts/jquery.syntaxhighlighter.min.js');
-        PageLayout::addHeadElement('script', array(), '$.SyntaxHighlighter.init({"wrapLines" : false});');
+        PageLayout::addScript($this->getPluginURL() . '/scripts/jquery.syntaxhighlighter.js');
+        PageLayout::addHeadElement('script', array(), '$.SyntaxHighlighter.init({"wrapLines" : false, "baseUrl" : "'.
+                $this->getPluginUrl() .'"});');
         PageLayout::addHeadElement('script', array(), '$(document).ready(function() { 
             $("code.code_content").addClass("highlight").removeClass("code_content").css("width", "auto");
             $("div.code_header").remove();
