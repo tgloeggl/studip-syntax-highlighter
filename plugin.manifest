@@ -1,0 +1,5 @@
+pluginclassname=StudIPSyntaxHighlighter
+pluginname=StudIPSyntaxHighlighter
+origin=elan-ev
+version=0.1.1
+studipMinVersion=2.4.x
